@@ -20,7 +20,7 @@ def train_model():
 
     # define configurations
     batch_size = 64
-    epochs = 5
+    epochs = 10
     loss = torch.nn.CrossEntropyLoss()
     lrates = [0.1, 0.01, 0.001]
     n_classes = len(indices_to_labels)
@@ -58,26 +58,24 @@ def train_model():
     # load data into datasets
     datasets = {
         "train": EuroSatRgbDataset(train_split, indices_to_labels, data_transforms["train"]),
-        "valid": EuroSatRgbDataset(valid_split, indices_to_labels, data_transforms["valid"]),
-        "test": EuroSatRgbDataset(test_split, indices_to_labels, data_transforms["valid"])
+        "valid": EuroSatRgbDataset(valid_split, indices_to_labels, data_transforms["valid"])
     }
     print("Number of samples:")
-    print(f"Train: {len(datasets['train'])} Validation: {len(datasets['valid'])} Test: {len(datasets['test'])}")
+    print(f"Train: {len(datasets['train'])} Validation: {len(datasets['valid'])}")
 
     # load data into batches
     dataloaders = {
         "train": torch.utils.data.DataLoader(datasets["train"], batch_size=batch_size, shuffle=True),
-        "valid": torch.utils.data.DataLoader(datasets["valid"], batch_size=batch_size, shuffle=False),
-        "test": torch.utils.data.DataLoader(datasets["test"], batch_size=batch_size, shuffle=False)
+        "valid": torch.utils.data.DataLoader(datasets["valid"], batch_size=batch_size, shuffle=False)
     }
     print("Number of batches:")
-    print(f"Train: {len(dataloaders['train'])} Validation: {len(dataloaders['valid'])} Test: {len(dataloaders['test'])}")
+    print(f"Train: {len(dataloaders['train'])} Validation: {len(dataloaders['valid'])}")
 
     """
-    Calculate mean and standard deviation for normalising image dataset
-    
-    Mean = [0.3458, 0.3816, 0.4091]
-    Std = [0.2022, 0.1354, 0.1136]
+        Calculate mean and standard deviation for normalising image dataset.
+        
+        Mean = [0.3458, 0.3816, 0.4091]
+        Std = [0.2022, 0.1354, 0.1136]
     """
     # imgs = torch.stack([img for img, label in datasets["train"]])
     #
@@ -115,10 +113,10 @@ def train_model():
         torch.save(best_model["weights"], "rgb_multiclass_model.pt")
 
     # save losses
-    with open("model_train_losses.txt", "w+") as file:
+    with open("rgb_multiclass_train_losses.txt", "w+") as file:
         file.write(",".join(map(str, best_model["model"].train_losses)))
 
-    with open("model_valid_losses.txt", "w+") as file:
+    with open("rgb_multiclass_valid_losses.txt", "w+") as file:
         file.write(",".join(map(str, best_model["model"].valid_losses)))
 
 

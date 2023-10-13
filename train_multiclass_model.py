@@ -86,6 +86,12 @@ def train_model():
     print("Splitting dataset...")
     train_split, valid_split, test_split = random_split(data, (0.7, 0.15, 0.15))
 
+    # save splits
+    with open("rgb_multiclass_datasets_split.txt", "w+") as file:
+        file.write(",".join([str(idx) for idx in train_split.indices]) + "\n")
+        file.write(",".join([str(idx) for idx in valid_split.indices]) + "\n")
+        file.write(",".join([str(idx) for idx in test_split.indices]))
+
     # load data into datasets
     datasets = {
         "train": EuroSatRgbDataset(train_split, indices_to_labels),
@@ -211,6 +217,7 @@ def train_model():
     torch.save(best_model["weights"], "rgb_multiclass_model.pt")
 
     with open("rgb_multiclass_params.txt", "w+") as file:
+        file.write("transform,parameter,epoch\n")
         file.write(",".join([best_model["transform"], str(best_model["param"]), str(best_model["epoch"])]))
 
     with open("rgb_multiclass_train_losses.txt", "w+") as file:

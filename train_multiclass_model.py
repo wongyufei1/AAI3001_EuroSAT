@@ -24,7 +24,8 @@ def train_model():
     loss = torch.nn.CrossEntropyLoss()
     lrates = [0.1, 0.01, 0.001]
     n_classes = len(indices_to_labels)
-    device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
+    device = torch.device(
+        "cuda") if torch.cuda.is_available() else torch.device("cpu")
 
     # define transforms
     data_transforms = {
@@ -53,7 +54,8 @@ def train_model():
 
     # split data
     print("Splitting dataset...")
-    train_split, valid_split, test_split = random_split(data, (0.7, 0.15, 0.15))
+    train_split, valid_split, test_split = random_split(
+        data, (0.7, 0.15, 0.15))
 
     # load data into datasets
     datasets = {
@@ -62,7 +64,8 @@ def train_model():
         "test": EuroSatRgbDataset(test_split, indices_to_labels, data_transforms["valid"])
     }
     print("Number of samples:")
-    print(f"Train: {len(datasets['train'])} Validation: {len(datasets['valid'])} Test: {len(datasets['test'])}")
+    print(
+        f"Train: {len(datasets['train'])} Validation: {len(datasets['valid'])} Test: {len(datasets['test'])}")
 
     # load data into batches
     dataloaders = {
@@ -71,7 +74,8 @@ def train_model():
         "test": torch.utils.data.DataLoader(datasets["test"], batch_size=batch_size, shuffle=False)
     }
     print("Number of batches:")
-    print(f"Train: {len(dataloaders['train'])} Validation: {len(dataloaders['valid'])} Test: {len(dataloaders['test'])}")
+    print(
+        f"Train: {len(dataloaders['train'])} Validation: {len(dataloaders['valid'])} Test: {len(dataloaders['test'])}")
 
     """
     Calculate mean and standard deviation for normalising image dataset
@@ -86,7 +90,8 @@ def train_model():
     # print(mean)
     # print(std)
 
-    best_model = {"model": None, "param": None, "epoch": None, "measure": None, "weights": None}
+    best_model = {"model": None, "param": None,
+                  "epoch": None, "measure": None, "weights": None}
 
     for lr in lrates:
         print(f"\nTraining model... (lr: {lr})")
@@ -101,7 +106,8 @@ def train_model():
                                              lr=lr,
                                              epochs=epochs)
 
-        best_epoch, best_measure, best_weights = euro_sat_rgb_model.fit(dataloaders["train"], dataloaders["valid"])
+        best_epoch, best_measure, best_weights = euro_sat_rgb_model.fit(
+            dataloaders["train"], dataloaders["valid"])
 
         # init best param, best measure and best weights, replace if new measure is better
         if best_model["measure"] is None or best_measure > best_model["measure"]:

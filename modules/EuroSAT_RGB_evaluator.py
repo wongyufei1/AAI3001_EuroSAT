@@ -41,4 +41,6 @@ class EuroSatRgbEvaluator:
             else:
                 classes_accuracy = np.append(classes_accuracy, accuracy)
 
-        return classes_accuracy
+        mean_accuracy = np.mean(classes_accuracy)
+
+        return mean_accuracy, classes_accuracy

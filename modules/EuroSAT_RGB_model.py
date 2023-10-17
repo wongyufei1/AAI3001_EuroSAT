@@ -93,8 +93,7 @@ class EuroSatRgbModel:
 
                 # compute some losses over time
                 loss = self.criterion(outputs, labels)
-                avg_loss = (avg_loss * datasize + loss) / \
-                    (datasize + inputs.shape[0])
+                avg_loss = (avg_loss * datasize + loss) / (datasize + inputs.shape[0])
                 epoch_losses.append(float(avg_loss))
 
                 # compute some accuracies over time
@@ -102,8 +101,7 @@ class EuroSatRgbModel:
                 _, labels = torch.max(labels, 1)
 
                 accuracy = torch.sum(preds == labels)
-                avg_accuracy = (avg_accuracy * datasize +
-                                accuracy) / (datasize + inputs.shape[0])
+                avg_accuracy = (avg_accuracy * datasize + accuracy) / (datasize + inputs.shape[0])
                 epoch_accuracies.append(float(avg_accuracy))
 
                 # update data size
@@ -116,8 +114,7 @@ class EuroSatRgbModel:
         best_epoch = -1
 
         if self.epochs is None or self.criterion is None or self.optimizer is None:
-            raise ValueError(
-                "Missing parameters \"epochs/criterion/optimizer\"")
+            raise ValueError("Missing parameters \"epochs/criterion/optimizer\"")
 
         for epoch in range(self.epochs):
             print('-' * 10)
@@ -127,8 +124,8 @@ class EuroSatRgbModel:
             # train and evaluate model performance
             train_loss, _ = self.train(train_loader)
             valid_loss, measure, _, _ = self.evaluate(val_loader)
-            print(f"Train Loss: {train_loss}")
-            print(f"")
+            print(f"\nTrain Loss: {train_loss}")
+            print(f"Valid Loss: {valid_loss}")
             print(f'Measure: {measure.item()}')
 
             # save metrics

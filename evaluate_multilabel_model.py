@@ -17,7 +17,6 @@ from modules.EuroSAT_RGB_model import EuroSatRgbModelMultiLabel
     Setup for evaluation.
 """
 # make results reproducible
-
 np.random.seed(0)
 torch.manual_seed(0)
 
@@ -29,15 +28,10 @@ indices_to_labels = ["AnnualCrop", "Forest", "HerbaceousVegetation",
 # define model configurations
 batch_size = 10
 model = models.efficientnet_b0(weights=EfficientNet_B0_Weights.DEFAULT)
-device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
-
-# check if cuda is available
-if torch.cuda.is_available():
-    weights = torch.load("rgb_multiclass_model.pt")
-else:
-    weights = torch.load("rgb_multiclass_model.pt", map_location=torch.device("cpu"))
-
 n_classes = len(indices_to_labels)
+device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
+save_dir = "rgb_multilabel_save_files"
+weights = torch.load(os.path.join(save_dir, "rgb_multilabel_model.pt"), map_location=device)
 
 # define transform
 data_transform = T.Compose([
@@ -47,13 +41,14 @@ data_transform = T.Compose([
     T.ToTensor(),
     T.Normalize([0.3450, 0.3809, 0.4084], [0.2038, 0.1370, 0.1152])
 ])
+
 """
     Split dataset into train, validation and test splits and load into batches.
 """
 print("Loading validation and test dataset...")
 data = load_data("EuroSAT_RGB")
 
-with open("rgb_multilabel_datasets_split.txt") as file:
+with open(os.path.join(save_dir, "rgb_multilabel_datasets_split.txt")) as file:
     dataset_splits = file.readlines()
     valid_split = [data[int(idx)] for idx in dataset_splits[1].strip().split(",")]
     test_split = [data[int(idx)] for idx in dataset_splits[2].strip().split(",")]
@@ -76,7 +71,7 @@ dataloaders = {
 """
     Initialise model and evaluator.
 """
-with open("rgb_multilabel_params.txt") as file:
+with open(os.path.join(save_dir, "rgb_multilabel_params.txt")) as file:
     lines = file.readlines()
     transform, lr, epoch = lines[1].strip().split(",")
 
@@ -106,13 +101,8 @@ for dl_name, dataloader in dataloaders.items():
     probs = torch.sigmoid(logits)
     preds = (probs > 0.5).float()
 
-    # one-hot encode predictions
-    # one_hot_preds = torch.zeros(probs.shape)
-    # for idx, pred in enumerate(one_hot_preds):
-    #     one_hot_preds[idx, preds[idx]] = 1.
-
     # save labels and predictions to file
-    with open(f"rgb_multilabel_{dl_name}_predictions.txt", "w+") as file:
+    with open(os.path.join(save_dir, f"rgb_multilabel_{dl_name}_predictions.txt"), "w+") as file:
         file.write("img_path;labels;predictions\n")
 
         for idx, pred in enumerate(preds):
@@ -126,10 +116,10 @@ for dl_name, dataloader in dataloaders.items():
             file.write(";".join([img_file, label, decoded_pred]) + "\n")
 
     # calculate each class's average precision measure
-    mean_avg_precision, classes_avg_precision = euro_sat_rgb_evaluator.avg_precision_by_class(preds, labels)
+    mean_avg_precision, classes_avg_precision = euro_sat_rgb_evaluator.avg_precision_by_class(probs.to("cpu"), labels)
 
     # calculate each class's accuracy score
-    mean_accuracy, classes_accuracy = euro_sat_rgb_evaluator.accuracy_by_class(preds, labels)
+    mean_accuracy, classes_accuracy = euro_sat_rgb_evaluator.accuracy_by_class(preds.to("cpu"), labels)
 
     print(f"\nEvaluation Results on {dl_name} dataset:")
     print(f"{'Class':<25} {'Average Precision':<25} {'Accuracy':<15}\n")
@@ -141,9 +131,9 @@ for dl_name, dataloader in dataloaders.items():
     Plot training and validation losses from saved files
 """
 # read in losses data
-with open("rgb_multilabel_train_losses.txt") as file:
+with open(os.path.join(save_dir, "rgb_multilabel_train_losses.txt")) as file:
     train_losses = [float(loss) for loss in file.readline().strip().split(",")]
-with open("rgb_multilabel_valid_losses.txt") as file:
+with open(os.path.join(save_dir, "rgb_multilabel_valid_losses.txt")) as file:
     valid_losses = [float(loss) for loss in file.readline().strip().split(",")]
 
 figure, ax = plt.subplots(1, 1, figsize=(10, 7))

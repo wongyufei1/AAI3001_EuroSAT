@@ -5,9 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1bcbfed-9978-4e47-84bf-39953f6fa0fe" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/AAI3001_EuroSAT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AAI3001_EuroSAT.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluate_multiclass_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/evaluate_multiclass_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluate_multilabel_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/evaluate_multilabel_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/EuroSAT_RGB_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/EuroSAT_RGB_dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/EuroSAT_RGB_evaluator.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/EuroSAT_RGB_evaluator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/EuroSAT_RGB_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/EuroSAT_RGB_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rgb_multiclass_datasets_split.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rgb_multiclass_model.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rgb_multiclass_params.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rgb_multiclass_test_predictions.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rgb_multiclass_train_losses.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rgb_multiclass_valid_losses.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rgb_multiclass_valid_predictions.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rgb_multilabel_datasets_split.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rgb_multilabel_model.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rgb_multilabel_params.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rgb_multilabel_test_predictions.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rgb_multilabel_train_losses.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rgb_multilabel_valid_losses.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rgb_multilabel_valid_predictions.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/train_multiclass_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_multiclass_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_multilabel_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_multilabel_model.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +46,9 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2WlPVv7Go0f1v2ZbqUWdABCd3D8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -32,11 +56,12 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -52,5 +77,16 @@
       <updated>1697304224140</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

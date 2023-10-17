@@ -8,13 +8,13 @@ class EuroSatRgbEvaluator:
         self.n_classes = len(indices_to_labels)
 
     # calculate average precision score for each class
-    def avg_precision_by_class(self, preds, labels):
+    def avg_precision_by_class(self, probs, labels):
         classes_avg_precision = None
 
         # loop through each class
         for i in range(self.n_classes):
             # calculate score
-            avg_precision = average_precision_score(labels[:, i], preds[:, i])
+            avg_precision = average_precision_score(labels[:, i], probs[:, i])
 
             # append to array
             if classes_avg_precision is None:

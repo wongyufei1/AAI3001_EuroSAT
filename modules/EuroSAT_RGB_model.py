@@ -10,7 +10,8 @@ class EuroSatRgbModel:
         self.epochs = epochs
         self.config_model(n_classes, weights)
         if lr is not None:
-            self.optimizer = torch.optim.SGD(self.model.parameters(), lr=lr, momentum=0.9)
+            self.optimizer = torch.optim.SGD(
+                self.model.parameters(), lr=lr, momentum=0.9)
         else:
             self.optimizer = None
 
@@ -60,7 +61,8 @@ class EuroSatRgbModel:
             self.optimizer.step()  # apply new gradients to change model parameters
 
             # calculate running avg loss
-            avg_loss = (avg_loss * datasize + loss) / (datasize + inputs.shape[0])
+            avg_loss = (avg_loss * datasize + loss) / \
+                (datasize + inputs.shape[0])
             epoch_losses.append(float(avg_loss))
 
             # update data size
@@ -91,14 +93,17 @@ class EuroSatRgbModel:
 
                 # compute some losses over time
                 loss = self.criterion(outputs, labels)
-                avg_loss = (avg_loss * datasize + loss) / (datasize + inputs.shape[0])
+                avg_loss = (avg_loss * datasize + loss) / \
+                    (datasize + inputs.shape[0])
                 epoch_losses.append(float(avg_loss))
 
                 # compute some accuracies over time
                 _, preds = torch.max(torch.softmax(outputs, 1), 1)
                 _, labels = torch.max(labels, 1)
+
                 accuracy = torch.sum(preds == labels)
-                avg_accuracy = (avg_accuracy * datasize + accuracy) / (datasize + inputs.shape[0])
+                avg_accuracy = (avg_accuracy * datasize +
+                                accuracy) / (datasize + inputs.shape[0])
                 epoch_accuracies.append(float(avg_accuracy))
 
                 # update data size
@@ -111,7 +116,8 @@ class EuroSatRgbModel:
         best_epoch = -1
 
         if self.epochs is None or self.criterion is None or self.optimizer is None:
-            raise ValueError("Missing parameters \"epochs/criterion/optimizer\"")
+            raise ValueError(
+                "Missing parameters \"epochs/criterion/optimizer\"")
 
         for epoch in range(self.epochs):
             print('-' * 10)
@@ -163,3 +169,57 @@ class EuroSatRgbModel:
                     labels = torch.cat((labels, batch[1]), dim=0)
 
         return logits, labels
+
+# EuroSatRgbModel for multi-label
+
+
+class EuroSatRgbModelMultiLabel(EuroSatRgbModel):
+    def __init__(self, model, device, n_classes, weights=None, criterion=None, lr=None, epochs=None):
+        super().__init__(model, device, n_classes, weights, criterion, lr, epochs)
+
+    # change the evaluation function to do sigmoid
+    def evaluate(self, dataloader):
+        # set to eval mode
+        self.model.eval()
+
+        # do not record computations for computing the gradient
+        with torch.no_grad():
+            epoch_losses = []
+            epoch_accuracies = []
+
+            datasize = 0
+            avg_accuracy = 0
+            avg_loss = 0
+
+            for batch in tqdm(dataloader):
+                # load inputs and labels to device
+                inputs = batch[0].to(self.device)
+                labels = batch[1].to(self.device)
+
+                # predict with model
+                outputs = self.model(inputs)
+
+                # compute some losses over time
+                loss = self.criterion(outputs, labels)
+                avg_loss = (avg_loss * datasize + loss) / \
+                    (datasize + inputs.shape[0])
+                epoch_losses.append(float(avg_loss))
+
+                # compute some accuracies over time (For multi-label), using sigmoid
+                probs = torch.sigmoid(outputs)
+                preds = (probs > 0.5).float()
+                # accuracy = torch.sum(preds == labels) # May not be correct
+                # accuracy = (preds == labels).sum()
+
+                # accuracy = (preds == labels).sum() / labels.size(1)
+                accuracy = sum([(label == preds[idx]).all(dim=0) for idx, label in enumerate(labels)])
+                # accuracy = (preds == labels).sum() / (labels.size(0) * labels.size(1))
+
+                avg_accuracy = (avg_accuracy * datasize +
+                                accuracy) / (datasize + inputs.shape[0])
+                epoch_accuracies.append(float(avg_accuracy))
+
+                # update data size
+                datasize += inputs.shape[0]
+
+        return avg_loss, avg_accuracy, epoch_losses, epoch_accuracies

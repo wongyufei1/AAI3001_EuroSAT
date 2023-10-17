@@ -22,7 +22,7 @@ def train_model():
                          "PermanentCrop", "Residential", "River", "SeaLake"]
 
     # define configurations
-    batch_size = 64
+    batch_size = 10
     epochs = 10
     loss = torch.nn.CrossEntropyLoss()
     lrates = [0.01, 0.001]

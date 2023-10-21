@@ -8,27 +8,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/AAI3001_EuroSAT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AAI3001_EuroSAT.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/evaluate_multiclass_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/evaluate_multiclass_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/evaluate_multilabel_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/evaluate_multilabel_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/EuroSAT_RGB_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/EuroSAT_RGB_dataset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/EuroSAT_RGB_evaluator.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/EuroSAT_RGB_evaluator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/EuroSAT_RGB_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/EuroSAT_RGB_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rgb_multiclass_datasets_split.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rgb_multiclass_model.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rgb_multiclass_params.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rgb_multiclass_test_predictions.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rgb_multiclass_train_losses.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rgb_multiclass_valid_losses.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rgb_multiclass_valid_predictions.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rgb_multilabel_datasets_split.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rgb_multilabel_model.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rgb_multilabel_params.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rgb_multilabel_test_predictions.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rgb_multilabel_train_losses.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rgb_multilabel_valid_losses.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rgb_multilabel_valid_predictions.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_multiclass_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_multiclass_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_multilabel_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_multilabel_model.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,15 +37,14 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/modules" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -88,5 +68,16 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/train_multiclass_model.py</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

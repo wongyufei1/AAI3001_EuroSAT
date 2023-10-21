@@ -1,2 +1,2 @@
 transform,parameter,epoch
-flip,0.01,8
+flip,0.01,5

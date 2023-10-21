@@ -27,7 +27,7 @@ def run(data_path):
                          "PermanentCrop", "Residential", "River", "SeaLake"]
 
     # define model configurations
-    batch_size = 10
+    batch_size = 64
     model = models.efficientnet_b0(weights=EfficientNet_B0_Weights.DEFAULT)
     n_classes = len(indices_to_labels)
     device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")

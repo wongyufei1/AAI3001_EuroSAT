@@ -21,7 +21,7 @@ def run(data_path):
                          "PermanentCrop", "Residential", "River", "SeaLake"]
 
     # define configurations
-    batch_size = 10
+    batch_size = 64
     epochs = 10
     loss = torch.nn.BCEWithLogitsLoss()  # Loss function for multi-label classification
     lrates = [0.01, 0.001]

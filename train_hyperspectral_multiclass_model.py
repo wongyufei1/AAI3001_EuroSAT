@@ -5,18 +5,14 @@ import numpy as np
 import torch
 from torch.utils.data import random_split
 from torchvision import models, transforms as T
-from torchvision.models import EfficientNet_B0_Weights
-import torch.nn as nn
+from torchvision.models import EfficientNet_B0_Weights, ResNet18_Weights
 
-from modules.EuroSAT_RGB_dataset import \
-	EuroSatRgbDataset, \
-	EuroSatHyperSpectralDataset, \
-	load_data, \
-	load_data_hyperspectral, \
-	load_split_data, \
-	extract_bands
+# Import resnet18
+from torchvision.models import resnet18
+
+from modules.EuroSAT_RGB_dataset import EuroSatRgbDataset, EuroSatHyperSpectralDataset, load_data, load_data_hyperspectral, load_split_data, extract_bands
 from modules.EuroSAT_RGB_evaluator import EuroSatRgbEvaluator
-from modules.EuroSAT_RGB_model import EuroSatRgbModel, HyperspectralModel
+from modules.EuroSAT_RGB_model import EuroSatRgbModel, HyperspectralModel, RGBEfficientNetModel, RGB_HyperSpectral_Model
 
 # Make results reproducible
 np.random.seed(0)
@@ -37,6 +33,10 @@ device = torch.device(
     "cuda") if torch.cuda.is_available() else torch.device("cpu")
 save_dir = "hyperspectral_multiclass_save_files"
 
+hyper_mean = [1353.9527587890625, 1115.400390625, 1033.31103515625, 934.7520751953125, 1180.4534912109375, 1964.8804931640625, 2326.806884765625, 2254.523193359375, 723.2532348632812, 13.145559310913086, 1780.3253173828125, 1097.9527587890625, 2543.12353515625]
+hyper_std = [243.3072967529297, 330.1734619140625, 395.2242126464844, 592.9466552734375, 574.9304809570312, 885.2379150390625, 1113.62060546875, 1142.745849609375, 404.9068298339844, 9.187087059020996, 1026.2681884765625, 764.8196411132812, 1267.559814453125]
+
+
 # Define transform for RGB and Tiff, normalise will have to be based on the calculate mean and SD
 data_transforms = {
     "rgb": {
@@ -56,12 +56,10 @@ data_transforms = {
 	"hyper": {
 		"train": T.Compose([
 			T.Resize(64),
-			T.ToTensor(),
-			T.Normalize([0.3450, 0.3809, 0.4084], [0.2038, 0.1370, 0.1152])]),
+			T.Normalize(hyper_mean, hyper_std)]),
 		"valid": T.Compose([
 			T.Resize(64),
-			T.ToTensor(),
-			T.Normalize([0.3450, 0.3809, 0.4084], [0.2038, 0.1370, 0.1152])]),
+			T.Normalize(hyper_mean, hyper_std)]),
 	}
 }
 
@@ -69,136 +67,134 @@ data_transforms = {
 print("Loading dataset...")
 rgb_train, rgb_val, rgb_test, hyper_train, hyper_val, hyper_test = load_split_data("../EuroSAT_multispectral")
 
+print("Number of samples:")
+print("RGB Train: ", len(rgb_train))
+print("RGB Val: ", len(rgb_val))
+print("RGB Test: ", len(rgb_test))
+print("Hyper Train: ", len(hyper_train))
+print("Hyper Val: ", len(hyper_val))
+print("Hyper Test: ", len(hyper_test))
+
 # Load data for TIFF, split them into 4 different data sets and do splits for train, val and test
 datasets_rgb = {
-  "train": EuroSatRgbDataset(rgb_train, indices_to_labels),
-  "valid": EuroSatRgbDataset(rgb_val, indices_to_labels),
+	"train": EuroSatRgbDataset(rgb_train, indices_to_labels),
+	"valid": EuroSatRgbDataset(rgb_val, indices_to_labels),
 }
 
-# Dataset for hyper split by band
-datasets_hyper = {
-	"train": {
-		"band1": [],
-		"band2": [],
-		"band3": [],
-		"band4": [],
-		"band5": [],
-		"band6": [],
-		"band7": [],
-		"band8": [],
-		"band9": [],
-		"band10": [],
-		"band11": [],
-		"band12": [],
-		"band13": [],
+datasets = {
+	"rgb": {
+		"train": EuroSatRgbDataset(rgb_train, indices_to_labels),
+		"valid": EuroSatRgbDataset(rgb_val, indices_to_labels),
 	},
-	"valid": {
-		"band1": [],
-		"band2": [],
-		"band3": [],
-		"band4": [],
-		"band5": [],
-		"band6": [],
-		"band7": [],
-		"band8": [],
-		"band9": [],
-		"band10": [],
-		"band11": [],
-		"band12": [],
-		"band13": [],
-	},
+	"hyper": {
+		"train": EuroSatHyperSpectralDataset(hyper_train, indices_to_labels),
+		"valid": EuroSatHyperSpectralDataset(hyper_val, indices_to_labels),
+	}
 }
 
-# Group all the 1st bands together, 2nd bands together etc.
-for element in hyper_train:
-	img_path = element['img_path']
-	imgs = extract_bands(img_path)
+# transform = T.ToTensor()
+#
+# imgs = torch.stack([transform(img) for img, label in datasets["rgb"]["train"]])
+#
+# print(imgs.shape)
+#
+# mean = torch.mean(imgs, dim=(0, 2, 3))
+# std = torch.std(imgs, dim=(0, 2, 3))
+# print(mean)
+# print(std)
+#
+# imgs = torch.stack([img for img, label in datasets["hyper"]["train"]])
+#
+# print(imgs.shape[2])
+#
+#
+# means = []
+# stds = []
+# for i in range(imgs.shape[1]):
+#     channel_data = imgs[:, i, :, :].float()  # Ensure data is of float type
+#     channel_mean = torch.mean(channel_data)
+#     channel_std = torch.std(channel_data)
+#     means.append(channel_mean.item())  # Append as Python float
+#     stds.append(channel_std.item())  # Append as Python float
+#
+# # Print the means and standard deviations for each channel
+# print("Means for each channel:", means)
+# print("Standard deviations for each channel:", stds)
+#
+#
+# exit()
 
-	band_list = []
-
-	for index, img in enumerate(imgs):
-		datasets_hyper['train'][f"band{index + 1}"].append({
-			'img': img,
-			'label': element['label']
-		})
-
-for element in hyper_val:
-	img_path = element['img_path']
-	imgs = extract_bands(img_path)
-
-	band_list = []
-
-	for index, img in enumerate(imgs):
-		datasets_hyper['valid'][f"band{index + 1}"].append({
-			'img': img,
-			'label': element['label']
-		})
-
-# Convert the list of dicts to a list of EuroSatHyperSpectralDataset
-for key, value in datasets_hyper.items():
-	for band, data in value.items():
-		datasets_hyper[key][band] = EuroSatHyperSpectralDataset(data, indices_to_labels)
-
-print("Number of RGB samples:")
-print(f"Train: {len(datasets_rgb['train'])}")
-print(f"Valid: {len(datasets_rgb['valid'])}")
-
-print("Number of Hyper samples:")
-for key, value in datasets_hyper.items():
-	for band, data in value.items():
-		print(f"{band}: {len(data)}")
-
-datasets_rgb["train"].transform = data_transforms["rgb"]["train"]
-datasets_rgb["valid"].transform = data_transforms["rgb"]["valid"]
-
-for key, value in datasets_hyper.items():
-	for band, data in value.items():
-		datasets_hyper[key][band].transform = data_transforms["hyper"][key]
+datasets['rgb']['train'].transform = data_transforms['rgb']['train']
+datasets['rgb']['valid'].transform = data_transforms['rgb']['valid']
+datasets['hyper']['train'].transform = data_transforms['hyper']['train']
+datasets['hyper']['valid'].transform = data_transforms['hyper']['valid']
 
 # Load the data into dataloaders
-dataloaders_rgb = {
-	"train": torch.utils.data.DataLoader(datasets_rgb["train"], batch_size=batch_size, shuffle=True),
-	"valid": torch.utils.data.DataLoader(datasets_rgb["valid"], batch_size=batch_size, shuffle=True),
+dataloaders = {
+	"rgb": {
+		"train": torch.utils.data.DataLoader(datasets['rgb']['train'], batch_size=batch_size, shuffle=True),
+		"valid": torch.utils.data.DataLoader(datasets['rgb']['valid'], batch_size=batch_size, shuffle=True),
+	},
+	"hyper": {
+		"train": torch.utils.data.DataLoader(datasets['hyper']['train'], batch_size=batch_size, shuffle=True),
+		"valid": torch.utils.data.DataLoader(datasets['hyper']['valid'], batch_size=batch_size, shuffle=True),
+	}
 }
 
-dataloaders_hyper = {
-	"train": {},
-	"valid": {},
-}
-
-for key, value in datasets_hyper.items():
-	for band, data in value.items():
-		dataloaders_hyper[key][band] = torch.utils.data.DataLoader(data, batch_size=batch_size, shuffle=True)
-
+best_model = {"model": None, "rgb_model": None, "hyper_model": None, "param": None, "epoch": None, "measure": None, "rgb_weights": None, "hyper_weights": None}
 
 # Train Custom Model that concatenates all the model
-# Test out the hyperspectral model first
-
 # clear gpu cache
 torch.cuda.empty_cache() if device == 'cuda' else None
 
-
 # Load model
-euro_hyper_model = HyperspectralModel(model=models.efficientnet_b0(weights=EfficientNet_B0_Weights.DEFAULT),
-                                                             device=device,
-                                                             n_classes=n_classes,
-                                                             criterion=loss,
-                                                             lr=lrates[0],
-                                                             epochs=epochs)
+euro_rgb_model = RGBEfficientNetModel(model=models.efficientnet_b0(weights=EfficientNet_B0_Weights.DEFAULT),
+								   device=device,
+								   n_classes=n_classes,
+								   criterion=loss,
+								   lr=lrates[0],
+								   epochs=epochs)
+
+euro_hyper_model = HyperspectralModel(model=resnet18(weights=ResNet18_Weights.DEFAULT),
+									 device=device,
+									 n_classes=n_classes,
+									 criterion=loss,
+									 lr=lrates[0],
+									 epochs=epochs)
+
+# Combined model
+euro_combined_model = RGB_HyperSpectral_Model(rgb_model=euro_rgb_model.get_model(), hyper_model=euro_hyper_model.get_model(), device=device, n_classes=n_classes, criterion=loss, lr=lrates[0], epochs=epochs)
 
 # Fit model
-best_epoch, best_measure, best_weights = euro_hyper_model.fit(dataloaders_hyper["train"], dataloaders_hyper["valid"])
+best_epoch, best_measure, rgb_best_weights, hyper_best_weights = euro_combined_model.fit(dataloaders['rgb']["train"], dataloaders['hyper']["train"], dataloaders['rgb']["valid"], dataloaders['hyper']["valid"])
 
-"""
-Model to train
-EfficientNet for RGB, last layer don't classify, return feature map
-EfficientNet for Tiff as well but need train on all 13 channels.
-Change the first and last layer to fit the dataset
+# Save model
+best_model["model"] = euro_combined_model
+best_model["rgb_model"] = euro_combined_model.get_rgb_model()
+best_model["hyper_model"] = euro_combined_model.get_hyper_model()
+best_model["param"] = lrates[0]
+best_model["epoch"] = best_epoch
+best_model["measure"] = best_measure
+best_model["rgb_weights"] = rgb_best_weights
+best_model["hyper_weights"] = hyper_best_weights
 
-Concatenate the feature maps from both models and pass it through a linear layer to classify
+# If Directory hyperspectral_multiclass_save_files does not exist, create it
+if not os.path.exists(save_dir):
+	os.makedirs(save_dir)
 
-"""
+# Save model
+torch.save(best_model['rgb_weights'], os.path.join(save_dir, "rgb_combined_model.pt"))
+torch.save(best_model['hyper_weights'], os.path.join(save_dir, "hyper_combined_model.pt"))
 
-# Train the model
+with open(os.path.join(save_dir, "hyper_multiclass_params.txt"), "w+") as file:
+    file.write("transform,parameter,epoch\n")
+    file.write(",".join(["flip", str(best_model["param"]), str(best_model["epoch"])]))
 
-# Save the model
+# save losses
+with open(os.path.join(save_dir, "hyper_multiclass_train_losses.txt"), "w+") as file:
+    file.write(",".join(map(str, best_model["model"].train_losses)))
+
+with open(os.path.join(save_dir, "hyper_multiclass_valid_losses.txt"), "w+") as file:
+    file.write(",".join(map(str, best_model["model"].valid_losses)))
+
+

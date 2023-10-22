@@ -22,6 +22,7 @@ class EuroSatRgbDataset(Dataset):
         # load image and standardize to RGB
         img = Image.open(self.data[idx]["img_path"]).convert("RGB")
 
+
         # transform image
         if self.transform:
             img = self.transform(img)
@@ -73,7 +74,13 @@ class EuroSatHyperSpectralDataset(EuroSatRgbDataset):
         bands = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 
         with rasterio.open(self.data[idx]["img_path"]) as dataset:
-            img = dataset.read(bands).astype(np.float64) # (13, 64, 64)
+            img = dataset.read(bands).astype(np.float64)  # (13, 64, 64)
+
+        img = torch.from_numpy(img)
+
+        # # transform image
+        if self.transform:
+            img = self.transform(img)
 
         # encode label
         label = encode_labels([self.data[idx]["label"]],
@@ -123,6 +130,7 @@ def decode_labels(predictions, indices_to_labels):
     :param indices_to_labels: indices to labels mapping
     :return: all truth label/s strings of a sample
     """
+
     # get all indices where prediction is 1
     indices = [i for i, x in enumerate(predictions) if x == 1]
 
@@ -199,11 +207,6 @@ def load_split_data(root):
 
         for row in csv_reader:
             # Skip the first row
-            i += 1
-
-            if i == 100:
-                break
-
             if "ClassName" in row:
                 pass
             else:

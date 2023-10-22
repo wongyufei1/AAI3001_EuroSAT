@@ -102,6 +102,9 @@ for dl_name, dataloader in dataloaders.items():
     for idx, pred in enumerate(one_hot_preds):
         one_hot_preds[idx, preds[idx]] = 1.
 
+    print("One hot preds dim: ", one_hot_preds.dim())
+    print("Labels dim: ", labels[0].dim())
+
     # save labels and predictions to file
     with open(os.path.join(save_dir, f"rgb_multiclass_{dl_name}_predictions.txt"), "w+") as file:
         file.write("img_path;labels;predictions\n")

@@ -32,7 +32,9 @@ n_classes = len(indices_to_labels)
 device = torch.device(
     "cuda") if torch.cuda.is_available() else torch.device("cpu")
 save_dir = "hyperspectral_multiclass_save_files"
+ROOT_DIR = "../EuroSAT_multispectral" # Change this to the correct path
 
+# Calculated mean and SD for HyperSpectral data, not sure if this is correct
 hyper_mean = [1353.9527587890625, 1115.400390625, 1033.31103515625, 934.7520751953125, 1180.4534912109375, 1964.8804931640625, 2326.806884765625, 2254.523193359375, 723.2532348632812, 13.145559310913086, 1780.3253173828125, 1097.9527587890625, 2543.12353515625]
 hyper_std = [243.3072967529297, 330.1734619140625, 395.2242126464844, 592.9466552734375, 574.9304809570312, 885.2379150390625, 1113.62060546875, 1142.745849609375, 404.9068298339844, 9.187087059020996, 1026.2681884765625, 764.8196411132812, 1267.559814453125]
 
@@ -63,9 +65,9 @@ data_transforms = {
 	}
 }
 
-# Split dataset into train, validation and test splits and load them into batchs for RGB
+# Load data based on existing splits
 print("Loading dataset...")
-rgb_train, rgb_val, rgb_test, hyper_train, hyper_val, hyper_test = load_split_data("../EuroSAT_multispectral")
+rgb_train, rgb_val, rgb_test, hyper_train, hyper_val, hyper_test = load_split_data(ROOT_DIR)
 
 print("Number of samples:")
 print("RGB Train: ", len(rgb_train))
@@ -92,37 +94,6 @@ datasets = {
 	}
 }
 
-# transform = T.ToTensor()
-#
-# imgs = torch.stack([transform(img) for img, label in datasets["rgb"]["train"]])
-#
-# print(imgs.shape)
-#
-# mean = torch.mean(imgs, dim=(0, 2, 3))
-# std = torch.std(imgs, dim=(0, 2, 3))
-# print(mean)
-# print(std)
-#
-# imgs = torch.stack([img for img, label in datasets["hyper"]["train"]])
-#
-# print(imgs.shape[2])
-#
-#
-# means = []
-# stds = []
-# for i in range(imgs.shape[1]):
-#     channel_data = imgs[:, i, :, :].float()  # Ensure data is of float type
-#     channel_mean = torch.mean(channel_data)
-#     channel_std = torch.std(channel_data)
-#     means.append(channel_mean.item())  # Append as Python float
-#     stds.append(channel_std.item())  # Append as Python float
-#
-# # Print the means and standard deviations for each channel
-# print("Means for each channel:", means)
-# print("Standard deviations for each channel:", stds)
-#
-#
-# exit()
 
 datasets['rgb']['train'].transform = data_transforms['rgb']['train']
 datasets['rgb']['valid'].transform = data_transforms['rgb']['valid']

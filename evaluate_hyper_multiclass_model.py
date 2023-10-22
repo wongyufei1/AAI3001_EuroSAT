@@ -35,7 +35,9 @@ device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cp
 save_dir = "hyperspectral_multiclass_save_files"
 rgb_weights = torch.load(os.path.join(save_dir, "rgb_combined_model.pt"), map_location=device)
 hyper_weights = torch.load(os.path.join(save_dir, "hyper_combined_model.pt"), map_location=device)
+ROOT_DIR = "../EuroSAT_multispectral" # Change this to the correct path
 
+# Calculate mean and std for each channel
 hyper_mean = [1353.9527587890625, 1115.400390625, 1033.31103515625, 934.7520751953125, 1180.4534912109375, 1964.8804931640625, 2326.806884765625, 2254.523193359375, 723.2532348632812, 13.145559310913086, 1780.3253173828125, 1097.9527587890625, 2543.12353515625]
 hyper_std = [243.3072967529297, 330.1734619140625, 395.2242126464844, 592.9466552734375, 574.9304809570312, 885.2379150390625, 1113.62060546875, 1142.745849609375, 404.9068298339844, 9.187087059020996, 1026.2681884765625, 764.8196411132812, 1267.559814453125]
 
@@ -54,10 +56,10 @@ hyper_data_transform = T.Compose([
 
 
 """
-    Split dataset into train, validation and test splits and load into batches.
+    Load data based on existing splits
 """
 print("Loading validation and test dataset...")
-rgb_train, rgb_val, rgb_test, hyper_train, hyper_val, hyper_test = load_split_data("../EuroSAT_multispectral")
+rgb_train, rgb_val, rgb_test, hyper_train, hyper_val, hyper_test = load_split_data(ROOT_DIR)
 
 # Change the Hyper Test and Hyper Val to be the same size as the RGB Test and RGB Val, shuffle first?
 hyper_test = hyper_test[:len(rgb_test)]

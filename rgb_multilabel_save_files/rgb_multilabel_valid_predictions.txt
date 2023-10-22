@@ -40,7 +40,7 @@ Forest_2892.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 AnnualCrop_176.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 Residential_817.jpg;Residential;Residential
 SeaLake_2836.jpg;SeaLake;SeaLake
-AnnualCrop_2425.jpg;AnnualCrop,PermanentCrop;Pasture
+AnnualCrop_2425.jpg;AnnualCrop,PermanentCrop;HerbaceousVegetation
 River_23.jpg;River;River
 Industrial_2445.jpg;Industrial;Industrial
 Residential_1962.jpg;Residential;Residential
@@ -182,7 +182,7 @@ PermanentCrop_5.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 Industrial_1411.jpg;Industrial;Industrial
 River_195.jpg;River;River
 Forest_2527.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
-Highway_973.jpg;Highway;
+Highway_973.jpg;Highway;River
 Residential_2273.jpg;Residential;Residential
 PermanentCrop_1514.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 Residential_1540.jpg;Residential;Residential
@@ -238,7 +238,7 @@ Industrial_954.jpg;Industrial;Industrial
 Highway_71.jpg;Highway;Highway
 Residential_2395.jpg;Residential;Residential
 Industrial_721.jpg;Industrial;Industrial
-Residential_1956.jpg;Residential;Residential
+Residential_1956.jpg;Residential;HerbaceousVegetation
 Forest_2831.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 PermanentCrop_167.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 Industrial_118.jpg;Industrial;Industrial
@@ -453,7 +453,7 @@ Residential_1841.jpg;Residential;Residential
 River_1075.jpg;River;River
 PermanentCrop_1437.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 Forest_1283.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
-Residential_402.jpg;Residential;Residential
+Residential_402.jpg;Residential;
 Forest_2752.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 PermanentCrop_827.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 SeaLake_1130.jpg;SeaLake;SeaLake
@@ -502,7 +502,7 @@ HerbaceousVegetation_2525.jpg;HerbaceousVegetation;
 SeaLake_2924.jpg;SeaLake;SeaLake
 SeaLake_2650.jpg;SeaLake;SeaLake
 HerbaceousVegetation_1406.jpg;HerbaceousVegetation;HerbaceousVegetation
-River_13.jpg;River;Highway
+River_13.jpg;River;River
 Pasture_281.jpg;Pasture;Pasture
 River_1345.jpg;River;River
 PermanentCrop_498.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
@@ -560,7 +560,7 @@ Highway_1907.jpg;Highway;Highway
 River_2286.jpg;River;River
 River_1417.jpg;River;River
 River_726.jpg;River;River
-Residential_1403.jpg;Residential;Residential
+Residential_1403.jpg;Residential;Industrial,Residential
 Industrial_1221.jpg;Industrial;Industrial
 Forest_760.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 SeaLake_1234.jpg;SeaLake;SeaLake
@@ -637,7 +637,7 @@ Pasture_1492.jpg;Pasture;Pasture
 River_2196.jpg;River;River
 Industrial_795.jpg;Industrial;Industrial
 Industrial_1275.jpg;Industrial;Industrial
-AnnualCrop_2741.jpg;AnnualCrop,PermanentCrop;
+AnnualCrop_2741.jpg;AnnualCrop,PermanentCrop;PermanentCrop
 Forest_1755.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 Residential_1258.jpg;Residential;Residential
 Residential_1234.jpg;Residential;Residential
@@ -818,9 +818,9 @@ PermanentCrop_72.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 PermanentCrop_2280.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 Highway_1262.jpg;Highway;Highway
 PermanentCrop_1668.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
-River_2151.jpg;River;
+River_2151.jpg;River;River
 SeaLake_1228.jpg;SeaLake;SeaLake
-Residential_1057.jpg;Residential;Residential
+Residential_1057.jpg;Residential;
 Residential_2584.jpg;Residential;Residential
 PermanentCrop_585.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 Forest_262.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
@@ -852,7 +852,7 @@ Residential_226.jpg;Residential;Residential
 Forest_737.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 AnnualCrop_1244.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 Residential_1751.jpg;Residential;Residential
-HerbaceousVegetation_687.jpg;HerbaceousVegetation;HerbaceousVegetation,PermanentCrop
+HerbaceousVegetation_687.jpg;HerbaceousVegetation;HerbaceousVegetation
 Forest_1661.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 AnnualCrop_1963.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 Industrial_635.jpg;Industrial;Industrial
@@ -929,7 +929,7 @@ Residential_888.jpg;Residential;Residential
 River_1409.jpg;River;River
 Highway_1912.jpg;Highway;Highway
 Residential_1337.jpg;Residential;Residential
-HerbaceousVegetation_1335.jpg;HerbaceousVegetation;HerbaceousVegetation,PermanentCrop
+HerbaceousVegetation_1335.jpg;HerbaceousVegetation;HerbaceousVegetation
 Pasture_1138.jpg;Pasture;Pasture
 River_714.jpg;River;River
 River_1448.jpg;River;River
@@ -974,7 +974,7 @@ PermanentCrop_804.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 HerbaceousVegetation_1638.jpg;HerbaceousVegetation;HerbaceousVegetation
 Pasture_74.jpg;Pasture;Pasture
 Highway_1381.jpg;Highway;Highway
-Highway_1888.jpg;Highway;Highway
+Highway_1888.jpg;Highway;AnnualCrop,Highway,PermanentCrop
 Industrial_1173.jpg;Industrial;Industrial
 Residential_2370.jpg;Residential;Residential
 AnnualCrop_1427.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
@@ -1060,7 +1060,7 @@ AnnualCrop_1364.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 HerbaceousVegetation_980.jpg;HerbaceousVegetation;HerbaceousVegetation
 HerbaceousVegetation_1015.jpg;HerbaceousVegetation;HerbaceousVegetation
 SeaLake_1509.jpg;SeaLake;SeaLake
-Residential_2334.jpg;Residential;Residential
+Residential_2334.jpg;Residential;HerbaceousVegetation,Residential
 River_877.jpg;River;River
 HerbaceousVegetation_723.jpg;HerbaceousVegetation;HerbaceousVegetation
 Residential_60.jpg;Residential;Residential
@@ -1130,7 +1130,7 @@ AnnualCrop_36.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 Highway_67.jpg;Highway;Highway
 River_237.jpg;River;River
 Industrial_370.jpg;Industrial;Industrial
-PermanentCrop_1371.jpg;AnnualCrop,PermanentCrop;AnnualCrop,Pasture,PermanentCrop
+PermanentCrop_1371.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 SeaLake_2234.jpg;SeaLake;SeaLake
 AnnualCrop_2290.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 Pasture_1458.jpg;Pasture;Pasture
@@ -1179,7 +1179,7 @@ Industrial_1767.jpg;Industrial;Industrial
 Pasture_1574.jpg;Pasture;Pasture
 AnnualCrop_308.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 AnnualCrop_2973.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
-River_892.jpg;River;Highway
+River_892.jpg;River;Highway,River
 Residential_1678.jpg;Residential;Residential
 River_1904.jpg;River;River
 Industrial_1470.jpg;Industrial;Industrial
@@ -1196,7 +1196,7 @@ Residential_789.jpg;Residential;Residential
 HerbaceousVegetation_2393.jpg;HerbaceousVegetation;HerbaceousVegetation
 AnnualCrop_2977.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 River_555.jpg;River;AnnualCrop,PermanentCrop,River
-PermanentCrop_1824.jpg;AnnualCrop,PermanentCrop;
+PermanentCrop_1824.jpg;AnnualCrop,PermanentCrop;HerbaceousVegetation
 Residential_512.jpg;Residential;Residential
 AnnualCrop_1158.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 AnnualCrop_1671.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
@@ -1284,7 +1284,7 @@ AnnualCrop_623.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 SeaLake_673.jpg;SeaLake;SeaLake
 PermanentCrop_273.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 Industrial_2158.jpg;Industrial;Industrial
-Pasture_563.jpg;Pasture;HerbaceousVegetation,Pasture
+Pasture_563.jpg;Pasture;HerbaceousVegetation
 Highway_1384.jpg;Highway;Highway
 Pasture_1641.jpg;Pasture;Pasture
 HerbaceousVegetation_1544.jpg;HerbaceousVegetation;HerbaceousVegetation
@@ -1313,7 +1313,7 @@ River_538.jpg;River;River
 Forest_920.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 AnnualCrop_244.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 AnnualCrop_1447.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
-Residential_2926.jpg;Residential;Residential
+Residential_2926.jpg;Residential;Industrial
 HerbaceousVegetation_2691.jpg;HerbaceousVegetation;HerbaceousVegetation
 Pasture_106.jpg;Pasture;Pasture
 Highway_2103.jpg;Highway;Highway
@@ -1375,7 +1375,7 @@ SeaLake_359.jpg;SeaLake;SeaLake
 AnnualCrop_1065.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 HerbaceousVegetation_791.jpg;HerbaceousVegetation;HerbaceousVegetation
 Residential_1946.jpg;Residential;Residential
-HerbaceousVegetation_1284.jpg;HerbaceousVegetation;Pasture
+HerbaceousVegetation_1284.jpg;HerbaceousVegetation;HerbaceousVegetation,Pasture
 Pasture_1977.jpg;Pasture;Pasture
 Pasture_212.jpg;Pasture;Pasture
 Highway_1307.jpg;Highway;River
@@ -1444,7 +1444,7 @@ Industrial_2233.jpg;Industrial;Industrial
 Highway_1065.jpg;Highway;Highway
 Pasture_104.jpg;Pasture;Pasture
 HerbaceousVegetation_1344.jpg;HerbaceousVegetation;HerbaceousVegetation
-Residential_254.jpg;Residential;Residential
+Residential_254.jpg;Residential;HerbaceousVegetation,Residential
 SeaLake_1840.jpg;SeaLake;SeaLake
 Highway_396.jpg;Highway;Highway
 River_1528.jpg;River;River
@@ -1469,8 +1469,8 @@ River_2246.jpg;River;River
 PermanentCrop_1470.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 River_1103.jpg;River;River
 Industrial_1041.jpg;Industrial;Industrial
-HerbaceousVegetation_527.jpg;HerbaceousVegetation;Pasture
-Residential_2539.jpg;Residential;Residential
+HerbaceousVegetation_527.jpg;HerbaceousVegetation;HerbaceousVegetation,Pasture
+Residential_2539.jpg;Residential;
 Forest_1381.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 Forest_1041.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 Forest_2721.jpg;Forest,HerbaceousVegetation;
@@ -1515,7 +1515,7 @@ HerbaceousVegetation_2010.jpg;HerbaceousVegetation;HerbaceousVegetation
 Forest_26.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 PermanentCrop_713.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 HerbaceousVegetation_2490.jpg;HerbaceousVegetation;HerbaceousVegetation
-Highway_1615.jpg;Highway;Highway
+Highway_1615.jpg;Highway;Highway,River
 Residential_1494.jpg;Residential;Residential
 HerbaceousVegetation_1803.jpg;HerbaceousVegetation;HerbaceousVegetation
 AnnualCrop_711.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
@@ -1565,7 +1565,7 @@ HerbaceousVegetation_1538.jpg;HerbaceousVegetation;HerbaceousVegetation
 Industrial_2206.jpg;Industrial;Industrial
 Highway_348.jpg;Highway;Highway
 AnnualCrop_2913.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
-Residential_83.jpg;Residential;Residential
+Residential_83.jpg;Residential;Industrial,Residential
 Industrial_837.jpg;Industrial;Industrial
 Pasture_140.jpg;Pasture;Pasture
 AnnualCrop_60.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
@@ -1624,7 +1624,7 @@ Industrial_838.jpg;Industrial;Industrial
 River_1186.jpg;River;River
 SeaLake_150.jpg;SeaLake;SeaLake
 Forest_1797.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
-Highway_483.jpg;Highway;Highway
+Highway_483.jpg;Highway;Highway,River
 Pasture_1450.jpg;Pasture;Pasture
 SeaLake_1864.jpg;SeaLake;SeaLake
 AnnualCrop_1518.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
@@ -1644,7 +1644,7 @@ SeaLake_2010.jpg;SeaLake;SeaLake
 Forest_2370.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 SeaLake_1671.jpg;SeaLake;SeaLake
 Forest_148.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
-Industrial_1655.jpg;Industrial;Residential
+Industrial_1655.jpg;Industrial;Industrial
 River_1944.jpg;River;River
 HerbaceousVegetation_1083.jpg;HerbaceousVegetation;HerbaceousVegetation
 Residential_457.jpg;Residential;Residential
@@ -1729,10 +1729,10 @@ River_313.jpg;River;River
 Pasture_1640.jpg;Pasture;Pasture
 SeaLake_2978.jpg;SeaLake;SeaLake
 River_2237.jpg;River;River
-PermanentCrop_1926.jpg;AnnualCrop,PermanentCrop;AnnualCrop,Forest,PermanentCrop
+PermanentCrop_1926.jpg;AnnualCrop,PermanentCrop;AnnualCrop,HerbaceousVegetation,PermanentCrop
 Forest_1638.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 Industrial_1603.jpg;Industrial;Industrial
-PermanentCrop_1208.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
+PermanentCrop_1208.jpg;AnnualCrop,PermanentCrop;
 AnnualCrop_2145.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 River_362.jpg;River;River
 River_48.jpg;River;River
@@ -1769,14 +1769,14 @@ Industrial_2178.jpg;Industrial;Industrial
 Residential_212.jpg;Residential;Residential
 HerbaceousVegetation_2820.jpg;HerbaceousVegetation;HerbaceousVegetation
 AnnualCrop_2355.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
-Residential_381.jpg;Residential;Residential
+Residential_381.jpg;Residential;HerbaceousVegetation
 Residential_1879.jpg;Residential;Residential
 Industrial_777.jpg;Industrial;Industrial
 Pasture_782.jpg;Pasture;Pasture
 AnnualCrop_2227.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 Industrial_2003.jpg;Industrial;Industrial
 Residential_1593.jpg;Residential;Residential
-Forest_1849.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
+Forest_1849.jpg;Forest,HerbaceousVegetation;HerbaceousVegetation
 River_860.jpg;River;River
 Highway_1134.jpg;Highway;Highway
 PermanentCrop_280.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
@@ -1811,7 +1811,7 @@ Residential_2918.jpg;Residential;Residential
 Residential_382.jpg;Residential;Residential
 PermanentCrop_1380.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 PermanentCrop_513.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
-Residential_1286.jpg;Residential;Residential
+Residential_1286.jpg;Residential;HerbaceousVegetation
 River_1244.jpg;River;River
 Residential_286.jpg;Residential;Residential
 River_1079.jpg;River;River
@@ -1833,7 +1833,7 @@ HerbaceousVegetation_1846.jpg;HerbaceousVegetation;HerbaceousVegetation
 SeaLake_2441.jpg;SeaLake;SeaLake
 PermanentCrop_2174.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 Residential_2935.jpg;Residential;Residential
-HerbaceousVegetation_2267.jpg;HerbaceousVegetation;AnnualCrop,HerbaceousVegetation
+HerbaceousVegetation_2267.jpg;HerbaceousVegetation;HerbaceousVegetation
 Pasture_504.jpg;Pasture;Pasture
 River_1756.jpg;River;River
 HerbaceousVegetation_1446.jpg;HerbaceousVegetation;HerbaceousVegetation
@@ -1883,16 +1883,16 @@ SeaLake_1687.jpg;SeaLake;SeaLake
 SeaLake_899.jpg;SeaLake;SeaLake
 SeaLake_1995.jpg;SeaLake;SeaLake
 SeaLake_1114.jpg;SeaLake;SeaLake
-SeaLake_2434.jpg;SeaLake;River,SeaLake
+SeaLake_2434.jpg;SeaLake;SeaLake
 Residential_2220.jpg;Residential;Residential
 Residential_2367.jpg;Residential;Residential
 SeaLake_303.jpg;SeaLake;SeaLake
 Forest_2001.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 HerbaceousVegetation_1844.jpg;HerbaceousVegetation;HerbaceousVegetation
-Highway_1168.jpg;Highway;Highway,River
+Highway_1168.jpg;Highway;River
 Residential_1583.jpg;Residential;Residential
 HerbaceousVegetation_2373.jpg;HerbaceousVegetation;HerbaceousVegetation
-PermanentCrop_2334.jpg;AnnualCrop,PermanentCrop;HerbaceousVegetation
+PermanentCrop_2334.jpg;AnnualCrop,PermanentCrop;AnnualCrop,HerbaceousVegetation,PermanentCrop
 SeaLake_2007.jpg;SeaLake;SeaLake
 SeaLake_1530.jpg;SeaLake;SeaLake
 HerbaceousVegetation_991.jpg;HerbaceousVegetation;HerbaceousVegetation
@@ -1952,7 +1952,7 @@ Forest_1825.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 AnnualCrop_2629.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 River_2160.jpg;River;River
 Highway_1998.jpg;Highway;Highway
-PermanentCrop_458.jpg;AnnualCrop,PermanentCrop;HerbaceousVegetation
+PermanentCrop_458.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 Residential_1491.jpg;Residential;Residential
 Industrial_295.jpg;Industrial;Industrial
 Forest_1370.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
@@ -1986,7 +1986,7 @@ Forest_567.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 AnnualCrop_1341.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 Pasture_328.jpg;Pasture;Pasture
 Forest_2188.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
-Residential_920.jpg;Residential;Residential
+Residential_920.jpg;Residential;Industrial,Residential
 Pasture_1769.jpg;Pasture;Pasture
 SeaLake_94.jpg;SeaLake;SeaLake
 Highway_1921.jpg;Highway;Highway
@@ -2004,9 +2004,9 @@ Industrial_2288.jpg;Industrial;Industrial
 HerbaceousVegetation_1604.jpg;HerbaceousVegetation;HerbaceousVegetation
 Residential_1588.jpg;Residential;Residential
 Industrial_318.jpg;Industrial;Industrial
-River_1701.jpg;River;
+River_1701.jpg;River;River
 River_2264.jpg;River;River
-River_1991.jpg;River;HerbaceousVegetation
+River_1991.jpg;River;
 River_577.jpg;River;River
 Forest_956.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 AnnualCrop_287.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
@@ -2081,7 +2081,7 @@ Forest_1278.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 SeaLake_1801.jpg;SeaLake;SeaLake
 Pasture_1396.jpg;Pasture;Pasture
 AnnualCrop_1005.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
-HerbaceousVegetation_191.jpg;HerbaceousVegetation;AnnualCrop,PermanentCrop
+HerbaceousVegetation_191.jpg;HerbaceousVegetation;
 AnnualCrop_908.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 PermanentCrop_1788.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 Residential_1268.jpg;Residential;Residential
@@ -2096,7 +2096,7 @@ Residential_2979.jpg;Residential;Residential
 PermanentCrop_1358.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 PermanentCrop_2179.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 SeaLake_538.jpg;SeaLake;SeaLake
-HerbaceousVegetation_2640.jpg;HerbaceousVegetation;HerbaceousVegetation
+HerbaceousVegetation_2640.jpg;HerbaceousVegetation;
 HerbaceousVegetation_1739.jpg;HerbaceousVegetation;HerbaceousVegetation
 Residential_2242.jpg;Residential;Residential
 SeaLake_2950.jpg;SeaLake;SeaLake
@@ -2172,12 +2172,12 @@ Pasture_288.jpg;Pasture;Pasture
 HerbaceousVegetation_173.jpg;HerbaceousVegetation;HerbaceousVegetation
 Forest_763.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 Residential_2994.jpg;Residential;Residential
-Highway_764.jpg;Highway;Highway
+Highway_764.jpg;Highway;
 HerbaceousVegetation_469.jpg;HerbaceousVegetation;HerbaceousVegetation
 Forest_2380.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 Highway_414.jpg;Highway;Highway
 PermanentCrop_143.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
-Industrial_436.jpg;Industrial;
+Industrial_436.jpg;Industrial;Industrial
 Forest_391.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 Residential_1259.jpg;Residential;Residential
 HerbaceousVegetation_211.jpg;HerbaceousVegetation;AnnualCrop,PermanentCrop
@@ -2225,7 +2225,7 @@ Industrial_220.jpg;Industrial;
 River_1963.jpg;River;River
 River_197.jpg;River;River
 AnnualCrop_416.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
-PermanentCrop_1774.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
+PermanentCrop_1774.jpg;AnnualCrop,PermanentCrop;HerbaceousVegetation
 Forest_2821.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 HerbaceousVegetation_1113.jpg;HerbaceousVegetation;HerbaceousVegetation
 Forest_889.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
@@ -2279,7 +2279,7 @@ AnnualCrop_798.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 River_1658.jpg;River;River
 SeaLake_2408.jpg;SeaLake;SeaLake
 AnnualCrop_921.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
-Residential_2993.jpg;Residential;Residential
+Residential_2993.jpg;Residential;HerbaceousVegetation,Residential
 HerbaceousVegetation_500.jpg;HerbaceousVegetation;HerbaceousVegetation
 River_449.jpg;River;River
 PermanentCrop_97.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
@@ -2330,7 +2330,7 @@ SeaLake_698.jpg;SeaLake;SeaLake
 HerbaceousVegetation_1917.jpg;HerbaceousVegetation;HerbaceousVegetation
 Pasture_882.jpg;Pasture;Pasture
 HerbaceousVegetation_263.jpg;HerbaceousVegetation;HerbaceousVegetation
-PermanentCrop_2110.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
+PermanentCrop_2110.jpg;AnnualCrop,PermanentCrop;PermanentCrop
 Highway_1777.jpg;Highway;Highway
 SeaLake_179.jpg;SeaLake;SeaLake
 PermanentCrop_1104.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
@@ -2356,7 +2356,7 @@ River_1376.jpg;River;River
 SeaLake_631.jpg;SeaLake;SeaLake
 Industrial_1492.jpg;Industrial;Industrial
 AnnualCrop_581.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
-Pasture_426.jpg;Pasture;
+Pasture_426.jpg;Pasture;HerbaceousVegetation
 SeaLake_2778.jpg;SeaLake;SeaLake
 Industrial_2356.jpg;Industrial;Industrial
 River_230.jpg;River;River
@@ -2451,7 +2451,7 @@ Forest_2157.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 Industrial_1841.jpg;Industrial;Industrial
 Forest_739.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 HerbaceousVegetation_2144.jpg;HerbaceousVegetation;HerbaceousVegetation
-Pasture_689.jpg;Pasture;HerbaceousVegetation,Pasture
+Pasture_689.jpg;Pasture;HerbaceousVegetation
 River_2457.jpg;River;River
 Residential_1187.jpg;Residential;Residential
 HerbaceousVegetation_2260.jpg;HerbaceousVegetation;HerbaceousVegetation
@@ -2530,7 +2530,7 @@ SeaLake_1791.jpg;SeaLake;SeaLake
 Pasture_694.jpg;Pasture;Pasture
 Residential_93.jpg;Residential;Residential
 SeaLake_1964.jpg;SeaLake;SeaLake
-Residential_110.jpg;Residential;Residential
+Residential_110.jpg;Residential;Industrial
 Forest_2642.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 Residential_2828.jpg;Residential;Residential
 Industrial_77.jpg;Industrial;Industrial
@@ -2559,7 +2559,7 @@ PermanentCrop_923.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 Highway_1449.jpg;Highway;Highway
 Pasture_405.jpg;Pasture;Pasture
 PermanentCrop_177.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
-Residential_2417.jpg;Residential;Residential
+Residential_2417.jpg;Residential;
 Residential_1541.jpg;Residential;Residential
 PermanentCrop_1607.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 AnnualCrop_1525.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
@@ -2569,7 +2569,7 @@ Residential_316.jpg;Residential;Residential
 AnnualCrop_1977.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 Residential_958.jpg;Residential;Residential
 PermanentCrop_1119.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
-Highway_1976.jpg;Highway;Highway
+Highway_1976.jpg;Highway;River
 AnnualCrop_1580.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 AnnualCrop_743.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 HerbaceousVegetation_1112.jpg;HerbaceousVegetation;HerbaceousVegetation
@@ -2586,9 +2586,9 @@ River_1035.jpg;River;River
 Highway_2269.jpg;Highway;Highway
 SeaLake_403.jpg;SeaLake;SeaLake
 HerbaceousVegetation_2836.jpg;HerbaceousVegetation;HerbaceousVegetation
-PermanentCrop_813.jpg;AnnualCrop,PermanentCrop;PermanentCrop
+PermanentCrop_813.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 AnnualCrop_918.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
-HerbaceousVegetation_2666.jpg;HerbaceousVegetation;AnnualCrop,HerbaceousVegetation,PermanentCrop
+HerbaceousVegetation_2666.jpg;HerbaceousVegetation;AnnualCrop,PermanentCrop
 PermanentCrop_1454.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 River_22.jpg;River;River
 AnnualCrop_1828.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
@@ -2641,7 +2641,7 @@ River_1559.jpg;River;River
 Industrial_1414.jpg;Industrial;Industrial
 Highway_639.jpg;Highway;Highway
 SeaLake_1798.jpg;SeaLake;SeaLake
-Residential_2973.jpg;Residential;Forest,Residential
+Residential_2973.jpg;Residential;Forest,HerbaceousVegetation
 Forest_2942.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 Forest_2875.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 Pasture_1561.jpg;Pasture;Pasture
@@ -2649,7 +2649,7 @@ Forest_587.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 Pasture_1421.jpg;Pasture;Pasture
 SeaLake_643.jpg;SeaLake;SeaLake
 Forest_899.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
-Residential_1227.jpg;Residential;Residential
+Residential_1227.jpg;Residential;HerbaceousVegetation
 SeaLake_1939.jpg;SeaLake;SeaLake
 Forest_2191.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 Residential_2078.jpg;Residential;Residential
@@ -2658,7 +2658,7 @@ PermanentCrop_1457.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 Highway_754.jpg;Highway;Highway
 PermanentCrop_2338.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 Residential_364.jpg;Residential;Residential
-Highway_2207.jpg;Highway;Highway,Industrial
+Highway_2207.jpg;Highway;Highway
 Residential_285.jpg;Residential;Residential
 AnnualCrop_2426.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 Pasture_305.jpg;Pasture;Pasture
@@ -2670,7 +2670,7 @@ PermanentCrop_1466.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 Residential_1052.jpg;Residential;Residential
 Pasture_1511.jpg;Pasture;Pasture
 Residential_2743.jpg;Residential;Residential
-Residential_388.jpg;Residential;Residential
+Residential_388.jpg;Residential;
 Residential_208.jpg;Residential;Residential
 AnnualCrop_1499.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 AnnualCrop_1272.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
@@ -2690,7 +2690,7 @@ Forest_1779.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 Industrial_1544.jpg;Industrial;Industrial
 Pasture_1569.jpg;Pasture;Pasture
 Pasture_915.jpg;Pasture;Pasture
-AnnualCrop_2269.jpg;AnnualCrop,PermanentCrop;
+AnnualCrop_2269.jpg;AnnualCrop,PermanentCrop;PermanentCrop
 Industrial_1467.jpg;Industrial;Industrial
 AnnualCrop_1271.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 HerbaceousVegetation_2075.jpg;HerbaceousVegetation;HerbaceousVegetation
@@ -2715,7 +2715,7 @@ PermanentCrop_1721.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 SeaLake_1841.jpg;SeaLake;SeaLake
 SeaLake_511.jpg;SeaLake;SeaLake
 Industrial_1277.jpg;Industrial;Industrial
-Residential_1361.jpg;Residential;Residential
+Residential_1361.jpg;Residential;Industrial
 SeaLake_1554.jpg;SeaLake;SeaLake
 Highway_442.jpg;Highway;Highway
 AnnualCrop_431.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
@@ -2732,7 +2732,7 @@ Residential_2858.jpg;Residential;Residential
 PermanentCrop_2260.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 HerbaceousVegetation_2983.jpg;HerbaceousVegetation;HerbaceousVegetation
 Forest_156.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
-AnnualCrop_1539.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
+AnnualCrop_1539.jpg;AnnualCrop,PermanentCrop;
 SeaLake_2248.jpg;SeaLake;SeaLake
 Industrial_1081.jpg;Industrial;Industrial
 Forest_2357.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
@@ -2753,7 +2753,7 @@ Residential_1629.jpg;Residential;Residential
 River_1835.jpg;River;River
 AnnualCrop_1705.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 PermanentCrop_1898.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
-HerbaceousVegetation_131.jpg;HerbaceousVegetation;HerbaceousVegetation
+HerbaceousVegetation_131.jpg;HerbaceousVegetation;AnnualCrop,HerbaceousVegetation,PermanentCrop
 PermanentCrop_2043.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 HerbaceousVegetation_1026.jpg;HerbaceousVegetation;HerbaceousVegetation
 Industrial_2373.jpg;Industrial;Industrial
@@ -2973,7 +2973,7 @@ Pasture_533.jpg;Pasture;Pasture
 Pasture_1776.jpg;Pasture;Pasture
 SeaLake_1806.jpg;SeaLake;SeaLake
 HerbaceousVegetation_2960.jpg;HerbaceousVegetation;HerbaceousVegetation
-River_1217.jpg;River;Highway,River
+River_1217.jpg;River;River
 AnnualCrop_2997.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 River_2082.jpg;River;River
 Forest_2512.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
@@ -2991,7 +2991,7 @@ AnnualCrop_2951.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 River_242.jpg;River;River
 Forest_2125.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 River_1607.jpg;River;River
-Residential_637.jpg;Residential;Residential
+Residential_637.jpg;Residential;
 Industrial_2395.jpg;Industrial;Industrial
 River_616.jpg;River;River
 Pasture_1768.jpg;Pasture;Pasture
@@ -3015,7 +3015,7 @@ AnnualCrop_1233.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 PermanentCrop_1974.jpg;AnnualCrop,PermanentCrop;HerbaceousVegetation
 HerbaceousVegetation_253.jpg;HerbaceousVegetation;HerbaceousVegetation
 River_630.jpg;River;River
-Residential_2422.jpg;Residential;Residential
+Residential_2422.jpg;Residential;
 River_87.jpg;River;River
 SeaLake_2135.jpg;SeaLake;SeaLake
 HerbaceousVegetation_2341.jpg;HerbaceousVegetation;HerbaceousVegetation
@@ -3026,7 +3026,7 @@ Residential_188.jpg;Residential;Residential
 SeaLake_842.jpg;SeaLake;SeaLake
 SeaLake_2882.jpg;SeaLake;SeaLake
 Residential_1941.jpg;Residential;Residential
-Highway_1781.jpg;Highway;Highway
+Highway_1781.jpg;Highway;
 PermanentCrop_1041.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 SeaLake_2038.jpg;SeaLake;SeaLake
 Forest_1568.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
@@ -3070,7 +3070,7 @@ Pasture_178.jpg;Pasture;Pasture
 Forest_651.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 River_2066.jpg;River;River
 Residential_1857.jpg;Residential;Residential
-Residential_822.jpg;Residential;Residential
+Residential_822.jpg;Residential;Industrial
 HerbaceousVegetation_1923.jpg;HerbaceousVegetation;HerbaceousVegetation
 Industrial_258.jpg;Industrial;Industrial
 Forest_2010.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
@@ -3111,7 +3111,7 @@ AnnualCrop_863.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 HerbaceousVegetation_1387.jpg;HerbaceousVegetation;HerbaceousVegetation
 AnnualCrop_1928.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 SeaLake_1904.jpg;SeaLake;SeaLake
-AnnualCrop_971.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
+AnnualCrop_971.jpg;AnnualCrop,PermanentCrop;AnnualCrop,HerbaceousVegetation,PermanentCrop
 Highway_342.jpg;Highway;Highway
 Forest_2159.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 Pasture_519.jpg;Pasture;Pasture
@@ -3155,7 +3155,7 @@ Forest_2741.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 Highway_787.jpg;Highway;Highway
 Highway_1112.jpg;Highway;Highway
 Pasture_1529.jpg;Pasture;Pasture
-Highway_1186.jpg;Highway;Highway
+Highway_1186.jpg;Highway;
 River_70.jpg;River;River
 HerbaceousVegetation_2487.jpg;HerbaceousVegetation;HerbaceousVegetation
 Residential_401.jpg;Residential;Residential
@@ -3179,7 +3179,7 @@ Pasture_1677.jpg;Pasture;Pasture
 HerbaceousVegetation_1964.jpg;HerbaceousVegetation;HerbaceousVegetation
 SeaLake_1578.jpg;SeaLake;SeaLake
 Highway_119.jpg;Highway;Highway
-PermanentCrop_1649.jpg;AnnualCrop,PermanentCrop;HerbaceousVegetation
+PermanentCrop_1649.jpg;AnnualCrop,PermanentCrop;AnnualCrop,HerbaceousVegetation,PermanentCrop
 Pasture_1760.jpg;Pasture;Pasture
 AnnualCrop_361.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 AnnualCrop_1777.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
@@ -3197,7 +3197,7 @@ Highway_1991.jpg;Highway;Highway
 HerbaceousVegetation_1184.jpg;HerbaceousVegetation;HerbaceousVegetation
 Highway_222.jpg;Highway;Highway
 Forest_1006.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
-Residential_352.jpg;Residential;Residential
+Residential_352.jpg;Residential;Industrial
 Forest_2514.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 PermanentCrop_202.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 Forest_2835.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
@@ -3205,12 +3205,12 @@ Highway_557.jpg;Highway;Highway
 Industrial_1549.jpg;Industrial;Industrial
 Residential_1840.jpg;Residential;Residential
 Residential_221.jpg;Residential;Residential
-Residential_1378.jpg;Residential;Residential
+Residential_1378.jpg;Residential;
 Residential_1895.jpg;Residential;Residential
 AnnualCrop_2201.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 Highway_1217.jpg;Highway;Highway
 Highway_2175.jpg;Highway;Highway
-Residential_50.jpg;Residential;Residential
+Residential_50.jpg;Residential;HerbaceousVegetation
 PermanentCrop_79.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 HerbaceousVegetation_2483.jpg;HerbaceousVegetation;HerbaceousVegetation
 Residential_230.jpg;Residential;Residential
@@ -3227,7 +3227,7 @@ AnnualCrop_1895.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 HerbaceousVegetation_1061.jpg;HerbaceousVegetation;HerbaceousVegetation
 SeaLake_614.jpg;SeaLake;SeaLake
 River_178.jpg;River;River
-Pasture_1543.jpg;Pasture;
+Pasture_1543.jpg;Pasture;HerbaceousVegetation
 SeaLake_57.jpg;SeaLake;SeaLake
 Industrial_210.jpg;Industrial;Industrial
 Highway_2340.jpg;Highway;Highway
@@ -3263,7 +3263,7 @@ PermanentCrop_44.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 PermanentCrop_383.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 Highway_1435.jpg;Highway;Highway
 Residential_288.jpg;Residential;Residential
-Forest_773.jpg;Forest,HerbaceousVegetation;HerbaceousVegetation
+Forest_773.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 Highway_232.jpg;Highway;Highway
 Forest_344.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 Industrial_1406.jpg;Industrial;Industrial
@@ -3288,7 +3288,7 @@ AnnualCrop_1294.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 Residential_1315.jpg;Residential;Residential
 River_2382.jpg;River;River
 HerbaceousVegetation_2383.jpg;HerbaceousVegetation;HerbaceousVegetation
-AnnualCrop_1923.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
+AnnualCrop_1923.jpg;AnnualCrop,PermanentCrop;AnnualCrop,HerbaceousVegetation,PermanentCrop
 PermanentCrop_57.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 Highway_852.jpg;Highway;Highway
 HerbaceousVegetation_2029.jpg;HerbaceousVegetation;HerbaceousVegetation
@@ -3367,7 +3367,7 @@ River_57.jpg;River;River
 AnnualCrop_698.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 Forest_2468.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 Highway_1045.jpg;Highway;Highway
-Pasture_1787.jpg;Pasture;HerbaceousVegetation,Pasture
+Pasture_1787.jpg;Pasture;HerbaceousVegetation
 Highway_54.jpg;Highway;Highway
 Forest_2179.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 River_2273.jpg;River;River
@@ -3413,7 +3413,7 @@ Highway_735.jpg;Highway;Highway
 Highway_158.jpg;Highway;Highway
 AnnualCrop_2910.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 AnnualCrop_2352.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
-Residential_1913.jpg;Residential;Residential
+Residential_1913.jpg;Residential;Industrial
 Highway_562.jpg;Highway;Highway
 Residential_1888.jpg;Residential;Residential
 River_958.jpg;River;River
@@ -3449,7 +3449,7 @@ SeaLake_1867.jpg;SeaLake;SeaLake
 Highway_625.jpg;Highway;Highway
 Highway_2090.jpg;Highway;Highway
 HerbaceousVegetation_1253.jpg;HerbaceousVegetation;HerbaceousVegetation
-Highway_990.jpg;Highway;Highway
+Highway_990.jpg;Highway;
 HerbaceousVegetation_1429.jpg;HerbaceousVegetation;HerbaceousVegetation
 Forest_2258.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 AnnualCrop_522.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
@@ -3532,7 +3532,7 @@ Forest_2865.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 SeaLake_596.jpg;SeaLake;SeaLake
 AnnualCrop_1549.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 Industrial_1943.jpg;Industrial;Industrial
-Pasture_1673.jpg;Pasture;AnnualCrop,PermanentCrop
+Pasture_1673.jpg;Pasture;
 Highway_36.jpg;Highway;Highway
 HerbaceousVegetation_1343.jpg;HerbaceousVegetation;HerbaceousVegetation
 River_641.jpg;River;River
@@ -3597,7 +3597,7 @@ River_592.jpg;River;River
 SeaLake_780.jpg;SeaLake;SeaLake
 AnnualCrop_792.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 Industrial_1831.jpg;Industrial;Industrial
-PermanentCrop_2163.jpg;AnnualCrop,PermanentCrop;AnnualCrop,Industrial,PermanentCrop
+PermanentCrop_2163.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 Highway_2325.jpg;Highway;Highway
 Forest_2879.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 Industrial_580.jpg;Industrial;Industrial
@@ -3615,7 +3615,7 @@ SeaLake_843.jpg;SeaLake;SeaLake
 Forest_203.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 AnnualCrop_1055.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 River_1339.jpg;River;River
-Highway_412.jpg;Highway;Highway
+Highway_412.jpg;Highway;
 Pasture_591.jpg;Pasture;Pasture
 SeaLake_2643.jpg;SeaLake;SeaLake
 SeaLake_2400.jpg;SeaLake;SeaLake
@@ -3744,7 +3744,7 @@ Forest_947.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 AnnualCrop_910.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 Forest_145.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 Pasture_703.jpg;Pasture;Pasture
-Residential_1068.jpg;Residential;Residential
+Residential_1068.jpg;Residential;HerbaceousVegetation
 AnnualCrop_89.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 PermanentCrop_612.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 Forest_518.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
@@ -3791,7 +3791,7 @@ Industrial_694.jpg;Industrial;Industrial
 Pasture_128.jpg;Pasture;Pasture
 SeaLake_1193.jpg;SeaLake;SeaLake
 River_583.jpg;River;River
-Residential_1160.jpg;Residential;Residential
+Residential_1160.jpg;Residential;Industrial,Residential
 Forest_1112.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 Residential_1966.jpg;Residential;Residential
 HerbaceousVegetation_1052.jpg;HerbaceousVegetation;HerbaceousVegetation
@@ -3841,7 +3841,7 @@ PermanentCrop_1587.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 HerbaceousVegetation_2614.jpg;HerbaceousVegetation;HerbaceousVegetation
 HerbaceousVegetation_2198.jpg;HerbaceousVegetation;HerbaceousVegetation
 AnnualCrop_712.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
-Residential_1665.jpg;Residential;Residential
+Residential_1665.jpg;Residential;
 River_703.jpg;River;River
 HerbaceousVegetation_762.jpg;HerbaceousVegetation;HerbaceousVegetation
 Forest_2949.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
@@ -3865,7 +3865,7 @@ Residential_2032.jpg;Residential;Residential
 Forest_2993.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 Residential_2984.jpg;Residential;Residential
 Residential_707.jpg;Residential;Residential
-Residential_1180.jpg;Residential;Residential
+Residential_1180.jpg;Residential;Industrial
 Industrial_898.jpg;Industrial;Industrial
 Forest_362.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 River_2029.jpg;River;River
@@ -3875,7 +3875,7 @@ Residential_2402.jpg;Residential;Residential
 AnnualCrop_402.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 Industrial_2106.jpg;Industrial;Industrial
 River_1080.jpg;River;River
-HerbaceousVegetation_2982.jpg;HerbaceousVegetation;HerbaceousVegetation
+HerbaceousVegetation_2982.jpg;HerbaceousVegetation;
 Residential_2466.jpg;Residential;Residential
 AnnualCrop_1284.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 HerbaceousVegetation_356.jpg;HerbaceousVegetation;HerbaceousVegetation
@@ -4005,7 +4005,7 @@ HerbaceousVegetation_1289.jpg;HerbaceousVegetation;HerbaceousVegetation
 HerbaceousVegetation_325.jpg;HerbaceousVegetation;HerbaceousVegetation
 Residential_1012.jpg;Residential;Residential
 PermanentCrop_395.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
-PermanentCrop_876.jpg;AnnualCrop,PermanentCrop;AnnualCrop,HerbaceousVegetation,PermanentCrop
+PermanentCrop_876.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 PermanentCrop_2499.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 SeaLake_1008.jpg;SeaLake;SeaLake
 Pasture_849.jpg;Pasture;Pasture
@@ -4024,7 +4024,7 @@ Forest_2586.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
 HerbaceousVegetation_2430.jpg;HerbaceousVegetation;HerbaceousVegetation
 Highway_2122.jpg;Highway;Highway
 Forest_1722.jpg;Forest,HerbaceousVegetation;Forest,HerbaceousVegetation
-Industrial_2235.jpg;Industrial;Industrial,Residential
+Industrial_2235.jpg;Industrial;Industrial
 AnnualCrop_1868.jpg;AnnualCrop,PermanentCrop;AnnualCrop,PermanentCrop
 Industrial_2006.jpg;Industrial;Industrial
 River_1523.jpg;River;River

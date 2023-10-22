@@ -44,7 +44,7 @@ class EuroSatRgbModel:
 
         epoch_losses = []
 
-        datasize = 0
+        num_of_batches = 0
         avg_loss = 0
 
         for batch in tqdm(dataloader):
@@ -63,12 +63,11 @@ class EuroSatRgbModel:
             self.optimizer.step()  # apply new gradients to change model parameters
 
             # calculate running avg loss
-            avg_loss = (avg_loss * datasize + loss) / \
-                (datasize + inputs.shape[0])
+            avg_loss = (avg_loss * num_of_batches + loss) / (num_of_batches + 1)
             epoch_losses.append(float(avg_loss))
 
-            # update data size
-            datasize += inputs.shape[0]
+            # update number of batches
+            num_of_batches += 1
 
         return avg_loss, epoch_losses
 
@@ -81,7 +80,7 @@ class EuroSatRgbModel:
             epoch_losses = []
             epoch_accuracies = []
 
-            datasize = 0
+            num_of_batches = 0
             avg_accuracy = 0
             avg_loss = 0
 
@@ -95,8 +94,8 @@ class EuroSatRgbModel:
 
                 # compute some losses over time
                 loss = self.criterion(outputs, labels)
-                avg_loss = (avg_loss * datasize + loss) / \
-                    (datasize + inputs.shape[0])
+
+                avg_loss = (avg_loss * num_of_batches + loss) / (num_of_batches + 1)
                 epoch_losses.append(float(avg_loss))
 
                 # compute some accuracies over time
@@ -104,12 +103,13 @@ class EuroSatRgbModel:
                 _, labels = torch.max(labels, 1)
 
                 accuracy = torch.sum(preds == labels)
-                avg_accuracy = (avg_accuracy * datasize +
-                                accuracy) / (datasize + inputs.shape[0])
+
+                avg_accuracy = (avg_accuracy * num_of_batches * inputs.shape[0] + accuracy) / \
+                               ((num_of_batches + 1) * inputs.shape[0])
                 epoch_accuracies.append(float(avg_accuracy))
 
                 # update data size
-                datasize += inputs.shape[0]
+                num_of_batches += 1
 
         return avg_loss, avg_accuracy, epoch_losses, epoch_accuracies
 
@@ -188,7 +188,7 @@ class EuroSatRgbModelMultiLabel(EuroSatRgbModel):
             epoch_losses = []
             epoch_accuracies = []
 
-            datasize = 0
+            num_of_batches = 0
             avg_accuracy = 0
             avg_loss = 0
 
@@ -202,8 +202,7 @@ class EuroSatRgbModelMultiLabel(EuroSatRgbModel):
 
                 # compute some losses over time
                 loss = self.criterion(outputs, labels)
-                avg_loss = (avg_loss * datasize + loss) / \
-                    (datasize + inputs.shape[0])
+                avg_loss = (avg_loss * num_of_batches + loss) / (num_of_batches + 1)
                 epoch_losses.append(float(avg_loss))
 
                 # compute some accuracies over time (For multi-label), using sigmoid
@@ -363,7 +362,7 @@ class HyperspectralModel(nn.Module):
                 epoch_accuracies.append(float(avg_accuracy))
 
                 # update data size
-                datasize += inputs.shape[0]
+                num_of_batches += 1
 
         return avg_loss, avg_accuracy, epoch_losses, epoch_accuracies
 

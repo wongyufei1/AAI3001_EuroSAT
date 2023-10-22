@@ -530,7 +530,6 @@ class RGB_HyperSpectral_Model(nn.Module):
 
         return output
 
-
     def train(self, rgb_dataloader, hyper_dataloader):
         # Set to train mode
         self.rgb_model.train()
@@ -672,7 +671,6 @@ class RGB_HyperSpectral_Model(nn.Module):
 
         return best_epoch, best_measure, rgb_best_weights, hyper_best_weights
 
-
     def predict_batches(self, rgb_dataloader, hyper_dataloader):
         # Set to eval mode
         self.rgb_model.eval()
@@ -696,8 +694,6 @@ class RGB_HyperSpectral_Model(nn.Module):
                 rgb_outputs = self.rgb_model(rgb_inputs.to(self.device))
                 hyper_outputs = self.hyper_model(hyper_inputs.float().to(self.device))
 
-
-
                 # Pass through relu and pooled and linear layer for hyper
                 hyper_relu = nn.ReLU()
                 hyper_pooled = nn.AvgPool2d(2)
@@ -714,7 +710,7 @@ class RGB_HyperSpectral_Model(nn.Module):
                 concatenated = torch.cat((features_rgb, features_hyper), dim=1)
 
                 # Pass through linear layer
-                linear_layer = nn.Linear(concatenated.size(1), self.n_classes)
+                linear_layer = nn.Linear(concatenated.size(1), self.n_classes).to(self.device)
                 outputs = linear_layer(concatenated.view(concatenated.size(0), -1)).to(self.device)
 
                 # concatenate labels TODO: Check if this is correct

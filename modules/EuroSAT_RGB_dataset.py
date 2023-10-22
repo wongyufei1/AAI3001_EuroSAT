@@ -7,7 +7,6 @@ import csv
 import torch
 import rasterio
 import numpy as np
-import glob
 from PIL import Image
 from torch.utils.data import Dataset
 
@@ -21,7 +20,6 @@ class EuroSatRgbDataset(Dataset):
     def __getitem__(self, idx):
         # load image and standardize to RGB
         img = Image.open(self.data[idx]["img_path"]).convert("RGB")
-
 
         # transform image
         if self.transform:
